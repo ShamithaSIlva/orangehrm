@@ -1,11 +1,12 @@
 /**
-* @api {post} /customer 2.Save Customer
+* @api {post} /customer 02.Save Customer
 * @apiName saveCustomer
 * @apiGroup Time
 * @apiVersion 0.1.0
 *
 * @apiParam  {String} name  Customer name.
-* @apiParam  {String} description  Description.
+* @apiParam  {String} [description]  Description.
+* @apiSuccess  {Number} customerId Saved customer id.
 *
 *
 * @apiSuccessExample Success-Response:
@@ -13,6 +14,7 @@
 *
 *      {
 *        "success": "Successfully Saved"
+*        "customerId": "13"
 *      }
 *
 * @apiError Invalid Parameter.

@@ -6,15 +6,17 @@
 *
 * @apiParam  {Number} customerId  Customer id.
 * @apiParam  {String} name  Project name.
-* @apiParam  {String} description  Description.
-* @apiParam  {String} adminIds project admin ids ( add up to 5 admin ids with comma separated ex 1,2,45,)
+* @apiParam  {String} [description]  Description.
+* @apiParam  {String} [adminIds] project admin ids ( add up to 5 admin ids with comma separated ex 1,2,45,)
+* @apiSuccess  {Number} projectId Saved project id.
 *
 *
 * @apiSuccessExample Success-Response:
 *     HTTP/1.1 200 OK
 *
 *      {
-*        "success": "Successfully Saved"
+*        "success": "Successfully Saved",
+*        "projectId": "1"
 *      }
 *
 * @apiError Invalid Parameter.

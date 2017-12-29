@@ -7,8 +7,8 @@
 * @apiParam  {Number} projectId  Project id.
 * @apiParam  {Number} customerId  Customer id.
 * @apiParam  {String} name  Project name.
-* @apiParam  {String} description  Description.
-* @apiParam  {String} adminIds project admin ids ( add up to 5 admin ids with comma separated ex 1,2,45,)
+* @apiParam  {String} [description]  Description.
+* @apiParam  {String} [adminIds] project admin ids ( add up to 5 admin ids with comma separated ex 1,2,45,)
 *
 *
 * @apiSuccessExample Success-Response:
