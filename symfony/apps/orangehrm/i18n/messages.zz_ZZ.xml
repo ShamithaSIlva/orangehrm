@@ -7536,6 +7536,22 @@
         <source>Your password must contain a lower-case letter, an upper-case letter, a digit and a special character. Try a different password.</source>
         <target>FR_Your password must contain a lower-case letter, an upper-case letter, a digit and a special character. Try a different password.</target>
       </trans-unit>
+      <trans-unit id="1884">
+        <source>Unable To Sync With Toggl</source>
+        <target>FR_Unable To Sync With Toggl</target>
+      </trans-unit>
+      <trans-unit id="1885">
+        <source>Confirm Toggl Sync</source>
+        <target>FR_Confirm Toggl Sync</target>
+      </trans-unit>
+      <trans-unit id="1886">
+        <source>Any existing timesheet entry will be overwritten if record for same date is matched. Click ok to continue.</source>
+        <target>FR_Any existing timesheet entry will be overwritten if record for same date is matched. Click ok to continue.</target>
+      </trans-unit>
+      <trans-unit id="1887">
+        <source>Sync With Toggl</source>
+        <target>FR_Sync With Toggl</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

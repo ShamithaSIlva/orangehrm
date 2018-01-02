@@ -16,6 +16,9 @@
 <script language="javascript">
     var inputDatePattern = '<?php  echo($inputDatePattern) ?>' ;
     var separatorString = '<?php echo __('to') ?>';
+    var togglSyncError = '<?php echo __('Unable To Sync With Toggl') ?>';
+    var togglButtonText = '<?php echo __('Sync With Toggl') ?>';
+
     $( document ).ready(function() {
 
         $("#loader-1").hide();
@@ -35,6 +38,8 @@
         } else {
             $('.syncToggl').show();
         }
+
+        $("#sycToggl").html(togglButtonText);
 
     });
 
@@ -128,7 +133,7 @@
     }
 
     function showErrorMsg(){
-        displayMessages('error','Unable To Sync With Toggl' );
+        displayMessages('error',togglSyncError );
         setTimeout(function () {
             $('#msgDiv').remove();
         }, 3000);
@@ -139,8 +144,8 @@
 
 <div>
     <div class ='toggl'>
+        <button type="button" id="sycToggl" class="syncToggl" onclick="syncToggl()">Sync With Toggl</button>
     <?php echo html_entity_decode($page['html']); ?>
-
         <div class="loader loader--style2" title="1">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="loader-1" class="svgcl" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
   <path fill="#000" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z">
@@ -153,14 +158,14 @@
     <div class="modal hide" id="togglConfirm" style="display: none;">
         <div class="modal-header">
             <a class="close" data-dismiss="modal">×</a>
-            <h3>Confirm Toggl Sync</h3>
+            <h3><?php echo __('Confirm Toggl Sync') ?></h3>
         </div>
         <div class="modal-body">
-            <p>Any existing timesheet entry will be overwritten if record for same date is matched. Click ok to continue.</p>
+            <p><?php echo __('Any existing timesheet entry will be overwritten if record for same date is matched. Click ok to continue.') ?></p>
         </div>
         <div class="modal-footer">
-            <input id="" onclick="startSyc()" class="" data-dismiss="modal" value="Ok" type="button">
-            <input id="addCancel" class="reset" data-dismiss="modal" value="Cancel" type="button">
+            <input id="" onclick="startSyc()" class="" data-dismiss="modal" value="<?php echo __('Ok') ?>" type="button">
+            <input id="addCancel" class="reset" data-dismiss="modal" value="<?php echo __('Cancel') ?>" type="button">
         </div>
     </div>
 
