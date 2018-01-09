@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $('#addEditCurrency').hide();
-   
+
+    var fewSeconds = 5;
     $('#btnSave').click(function() {  
         
         if($('#btnSave').val() == lang_edit){
@@ -10,7 +11,12 @@ $(document).ready(function() {
         } else if ($('#btnSave').val() == lang_save){
             $('#payGrade_payGradeId').val(payGradeId);
             $('#frmPayGrade').submit();
-        }        
+        }
+        var btn = $(this);
+        btn.prop('disabled', true);
+        setTimeout(function(){
+            btn.prop('disabled', false);
+        }, fewSeconds*1000);
     });
     
     $('#btnDeleteCurrency').attr('disabled', 'disabled');

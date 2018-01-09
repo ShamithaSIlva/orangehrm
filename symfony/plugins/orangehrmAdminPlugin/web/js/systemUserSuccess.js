@@ -134,7 +134,8 @@ $(document).ready(function() {
             $('.secPasswordDiv').hide();
         }
     });
-    
+
+    var fewSeconds = 5;
     $('#btnSave').click(function() {
         
         if ($('#btnSave').val() == user_edit){
@@ -145,6 +146,11 @@ $(document).ready(function() {
                 $('#frmSystemUser').submit();
             }
         }
+        var btn = $(this);
+        btn.prop('disabled', true);
+        setTimeout(function(){
+            btn.prop('disabled', false);
+        }, fewSeconds*1000);
     });
     
     if(userId > 0){
