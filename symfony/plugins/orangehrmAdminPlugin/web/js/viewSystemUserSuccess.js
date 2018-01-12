@@ -32,9 +32,9 @@ $(document).ready(function() {
     });
 
     $('#frmList_ohrmListComponent').attr('name','frmList_ohrmListComponent');
-    $('#dialogDeleteBtn').click(function() {
+    /*$('#dialogDeleteBtn').click(function() {
         document.frmList_ohrmListComponent.submit();
-    });
+    });*/
     $('#dialogCancelBtn').click(function() {
         $("#deleteConfirmation").dialog("close");
     });
